@@ -1,0 +1,263 @@
+{
+    "info": {
+        "_postman_id": "1dc1619a-5529-49e4-bfd0-9f143b187591",
+        "name": "Pokemon API Documentation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "pokemons",
+            "item": [
+                {
+                    "name": "Sample endpoint: Returns all Pokemons",
+                    "id": "3b528436-83ce-4f89-a066-742d0ba32182",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/pokemons",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pokemons"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "a6ced67a-1cc6-489a-84c7-4b690a796942",
+                            "name": "Details about Pokemons",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pokemons",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pokemons"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": "A link to the next page of responses",
+                                    "key": "x-next",
+                                    "value": "dolor"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n  {\n    \"id\": 98996349,\n    \"name\": \"Lorem ipsum esse\",\n    \"tag\": \"dese\"\n  },\n  {\n    \"id\": -73315125,\n    \"name\": \"nisi laboris\",\n    \"tag\": \"ut pariatur\"\n  }\n]"
+                        },
+                        {
+                            "id": "04d9a092-236d-4da2-b6bb-0e988c59cdc5",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pokemons",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pokemons"
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"code\": -30342964,\n  \"message\": \"cup\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Returns a single Pokemon",
+                    "id": "284ca96b-37d8-4f16-861a-24397b9f2156",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/pokemons/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pokemons",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "d6a8c1fc-c883-4ece-9f07-d8f4a323fea1",
+                                    "key": "id",
+                                    "value": "88965271",
+                                    "description": "(Required) ID of the Pokemon"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "d20c2951-b52c-434a-8a18-91b059048034",
+                            "name": "Details about a Pokemon by ID",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pokemons/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pokemons",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "88965271",
+                                            "description": "(Required) ID of the Pokemon"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "description": "A link to the next page of responses",
+                                    "key": "x-next",
+                                    "value": "dolor"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"id\": 84456963,\n  \"name\": \"aute exercitation\",\n  \"tag\": \"sit pariatur adipisicing dolor\"\n}"
+                        },
+                        {
+                            "id": "0200a509-a619-480e-b76e-33d7ca196788",
+                            "name": "Unexpected error",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/pokemons/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "pokemons",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "88965271",
+                                            "description": "(Required) ID of the Pokemon"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"code\": -30342964,\n  \"message\": \"cup\"\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "890815cc-db10-4d49-9adb-b6774435cbb8"
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "eb841367-10ca-4ffb-8fd7-3d4423f3e484",
+            "key": "baseUrl",
+            "value": "https://pokemon.postman.com",
+            "type": "string"
+        }
+    ]
+}
