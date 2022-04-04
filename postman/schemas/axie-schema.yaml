@@ -9,7 +9,7 @@ servers:
 paths:
   /axies/{id}:
     get:
-      summary: 'Returns one Axie'
+      summary: 'Returns a single Axie'
       operationId: listAxie
       tags:
         - axies
