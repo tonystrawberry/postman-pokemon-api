@@ -1,0 +1,218 @@
+{
+    "info": {
+        "_postman_id": "14a57b06-5dc2-469b-86df-be38f3ca0275",
+        "name": "Pokemon API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Single Pokemon",
+            "id": "c38239a3-3899-4f62-adb3-a442142166cf",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/pokemons/:id",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "pokemons",
+                        ":id"
+                    ],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "4545",
+                            "description": "(Required) ID of the Pokemon"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "cd81f3b1-9d94-42ae-ac43-1f719e25d00f",
+                    "name": "Details about a Pokemon by ID",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/pokemons/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pokemons",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": null
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "disabled": false,
+                            "description": "A link to the next page of responses",
+                            "key": "x-next",
+                            "value": "cillum au"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"id\": 74307989,\n  \"name\": \"culpa\",\n  \"tag\": \"Ut\"\n}"
+                },
+                {
+                    "id": "1b8babe9-ea43-4182-b3b9-7c95dc224a0f",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/pokemons/:id",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "pokemons",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "f3536882-094a-49ce-9d88-91b9e9dfb78e",
+                                    "key": "id",
+                                    "value": "57275150",
+                                    "description": "(Required) ID of the Pokemon"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": null,
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n    \"code\": 94952458,\n    \"message\": \"dolore tempor irure nostrud\"\n}"
+                }
+            ]
+        },
+        {
+            "name": "All Pokemons",
+            "id": "e9c9fccb-41db-4959-b296-c65bd319442d",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/pokemons",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "pokemons"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "f6ff3d05-669a-4ff6-a66c-eb41201c2f90",
+                    "name": "All Pokemons",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Basic <credentials>",
+                                "description": "Added as a part of security scheme: basic",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "https://pokemon.postman.com/pokemons",
+                            "protocol": "https",
+                            "host": [
+                                "pokemon",
+                                "postman",
+                                "com"
+                            ],
+                            "path": [
+                                "pokemons"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [
+                        {
+                            "expires": "Invalid Date"
+                        }
+                    ],
+                    "responseTime": null,
+                    "body": "[{\n  \"id\": 74307989,\n  \"name\": \"culpa\",\n  \"tag\": \"Ut\"\n},{\n  \"id\": 74307989,\n  \"name\": \"culpa\",\n  \"tag\": \"Ut\"\n}]"
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "f97623f2-121b-4d9c-86d9-c8047f9c7933",
+            "key": "baseUrl",
+            "value": "https://pokemon.postman.com",
+            "type": "string"
+        }
+    ]
+}
